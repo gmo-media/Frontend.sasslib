@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/**
+ * float を解除する
+ *
+ * Note:
+ * - float している要素をもつ親要素に指定してください。
+ */
+@mixin clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

@@ -1,0 +1,14 @@
+/**
+ * ボックス内のテキストなどを天地中央に配置する
+ *
+ * @param {number} $height - 高さ
+ *
+ * Note:
+ * - ボックス側に指定します。
+ * - line-height で位置調整しているため、無理に折り返すと崩れます。
+ */
+@mixin vertical-centering($height) {
+  height: $height;
+  line-height: $height;
+  white-space: nowrap;
+}

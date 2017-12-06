@@ -1,0 +1,13 @@
+{
+  "name": "@gmo-media/sasslib",
+  "description": "Sass libraries for gmo-media",
+  "version": "1.0.0",
+  "author": "GMO Media,Inc.",
+  "bugs": {
+    "url": "https://github.com/gmo-media/Frontend.sasslib/issues"
+  },
+  "homepage": "https://github.com/gmo-media/Frontend.sasslib#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "https://github.com/gmo-media/Frontend.sasslib"
+}

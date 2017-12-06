@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/**
+ * 正円を作る
+ *
+ * @param {number} $size - 円のサイズ
+ */
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}

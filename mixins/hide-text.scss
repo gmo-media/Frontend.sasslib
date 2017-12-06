@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/**
+ * テキストを隠す（画像置換用）
+ *
+ * Note:
+ * - 画像を表示したいけど、SEO対策でテキストを入れる必要がある場合などに使います。
+ * - img タグの alt や title で十分な場合はその方がよいです。
+ *
+ * Usage:
+ * <style>
+ * .logo {
+ *   @include hide-text;
+ *   width: 240px;
+ *   height: 80px;
+ *   background-image: url(/img/logo.png);
+ *   background-size: cover;
+ * }
+ * </style>
+ *
+ * <h1 class="logo">サービス名</h1>
+ */
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}

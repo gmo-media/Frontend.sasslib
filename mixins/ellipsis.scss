@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/**
+ * テキストを自動省略する
+ *
+ * @param {number} [$lines: 1] - 表示する行数
+ *
+ * Note:
+ * - 2行以上での省略は WebKit 系ブラウザしか対応していません。
+ */
+@mixin ellipsis($lines: 1) {
+  @if $lines == 1 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  @else {
+    // ３つとも非標準プロパティのためベンダープレフィクスをつける。
+    // autoprefixerのremoveモードで消されないよう、インターポレーション形式で書く。
+    display: #{-webkit-box};
+    #{-webkit-line-clamp}: $lines;
+    #{-webkit-box-orient}: vertical;
+  }
+
+  overflow: hidden;
+}
