@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import "./root";
+@import "../mixins/clearfix";
+
+/**
+ * メディア型コンポーネントを定義する
+ *
+ * @param {number} $thumb-width - サムネイルの幅
+ * @param {number} $spacing - サムネイルと詳細の間の余白
+ *
+ * Element:
+ * - &__thumb
+ * - &__detail
+ *
+ * Note:
+ * - flex が利用できない場合は c-media-legacy を使ってください。
+ */
+@mixin c-media($thumb-width, $spacing) {
+  @include c-root;
+  display: flex;
+
+  &__thumb {
+    width: $thumb-width;
+  }
+
+  &__detail {
+    width: calc(100% - #{$thumb-width});
+    padding-left: $spacing;
+  }
+}
+
+@mixin c-media-legacy($thumb-width, $spacing) {
+  @include c-root;
+  @include clearfix;
+
+  &__thumb {
+    float: left;
+    width: $thumb-width;
+  }
+
+  &__detail {
+    float: right;
+    width: calc(100% - #{$thumb-width} - #{$spacing});
+  }
+}
