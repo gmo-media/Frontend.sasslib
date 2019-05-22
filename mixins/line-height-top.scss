@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/**
+ * テキストの配置をデザインツールと互換性のあるものにする
+ *
+ * Sketch や Figma などのデザインツールでは、テキストはインラインボックスの
+ * 上端（top）に配置されますが、ブラウザでは中央（middle）に配置されるため、
+ * テキスト位置がデザインより下にずれた状態になります。
+ * この mixin はデザイン通りにテキストが配置されるようにします。
+ * ※インラインボックスとは line-height で確保される１行分の領域を指します。
+ *
+ * @param {number} $line-height - line-height値（単位なしの1.0以上の実数）
+ *
+ * Note:
+ * - 疑似要素で余白を調整しているため、テキスト位置の調整は継承されません。
+ */
+@mixin line-height-top($line-height) {
+  line-height: $line-height;
+
+  &::after, &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+  }
+
+  // 上の余白をネガティブマージンで消す（インラインボックス全体が上にずれる）
+  // ※上下の余白は ($line-height * 1em - 1em) / 2
+  &::before {
+    margin-top: calc((1 - #{$line-height}) * .5em);
+  }
+
+  // 消した分の余白を下に補う（マージンの相殺を避けるためパディングを使う）
+  &::after {
+    padding-bottom: calc((#{$line-height} - 1) * .5em);
+  }
+}
