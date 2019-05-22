@@ -6,6 +6,9 @@
   "bugs": {
     "url": "https://github.com/gmo-media/Frontend.sasslib/issues"
   },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  },
   "homepage": "https://github.com/gmo-media/Frontend.sasslib#readme",
   "license": "MIT",
   "main": "index.js",
