@@ -1,20 +1,20 @@
 @charset "utf-8";
 
-/**
- * 子要素を等間隔にレイアウトする（flexが使えない場合用）
- *
- * @param {number} $column - 子要素の数
- * @param {string} $child - 子要素を表すセレクタ
- * @param {number} [$spacing-x: 0] - 子要素間の横方向の余白
- * @param {number} [$spacing-y: 0] - 子要素間の縦方向の余白
- * @param {number} [$font-size: 1rem] - 子要素のフォントサイズ
- *
- * Note:
- * - この mixin は親要素に指定してください。
- * - 親要素の font-size は 0 になります。
- * - 子要素の font-size を指定しなかった場合 1rem になります。
- * - 子要素の高さが異なる場合は頭ぞろえになります。
- */
+// ------------------------------------------------------------------
+// 子要素を等間隔にレイアウトする（flexが使えない場合用）
+//
+// @param {number} $column - 子要素の数
+// @param {string} $child - 子要素を表すセレクタ
+// @param {number} [$spacing-x: 0] - 子要素間の横方向の余白
+// @param {number} [$spacing-y: 0] - 子要素間の縦方向の余白
+// @param {number} [$font-size: 1rem] - 子要素のフォントサイズ
+//
+// Note:
+// - この mixin は親要素に指定してください。
+// - 親要素の font-size は 0 になります。
+// - 子要素の font-size を指定しなかった場合 1rem になります。
+// - 子要素の高さが異なる場合は頭ぞろえになります。
+//
 @mixin auto-alignment($column, $child, $spacing-x: 0, $spacing-y: 0, $font-size: 1rem) {
   // IEの calc() は小数第３位を四捨五入するため、分母を 100% にすると
   // $column によってはカラム落ちしてしまうので、99.9999% にする

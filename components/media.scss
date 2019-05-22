@@ -2,19 +2,19 @@
 @import "./root";
 @import "../mixins/clearfix";
 
-/**
- * メディア型コンポーネントを定義する
- *
- * @param {number} $thumb-width - サムネイルの幅
- * @param {number} $spacing - サムネイルと詳細の間の余白
- *
- * Element:
- * - &__thumb
- * - &__detail
- *
- * Note:
- * - flex が利用できない場合は c-media-legacy を使ってください。
- */
+// ------------------------------------------------------------------
+// メディア型コンポーネントを定義する
+//
+// @param {number} $thumb-width - サムネイルの幅
+// @param {number} $spacing - サムネイルと詳細の間の余白
+//
+// Element:
+// __thumb
+// __detail
+//
+// Note:
+// - flex が利用できない場合は c-media-legacy を使ってください。
+//
 @mixin c-media($thumb-width, $spacing) {
   @include c-root;
   display: flex;
