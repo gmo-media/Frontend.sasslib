@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// iOSの不具合を解消するユーティリティ
+
+/**
+ * clickイベントをdocumentなどに委譲できない問題を解消する
+ *
+ * Note:
+ * - イベントを委譲したい要素に @extend してください。
+ */
+%fix-ios-event-delegation {
+  cursor: pointer;
+}
