@@ -1,9 +1,9 @@
 @charset "utf-8";
 
-@import "mixins/auto-alignment";
-@import "mixins/circle";
-@import "mixins/clearfix";
-@import "mixins/ellipsis";
-@import "mixins/hide-text";
-@import "mixins/line-height-top";
-@import "mixins/vertical-centering";
+@import "./mixins/auto-alignment";
+@import "./mixins/circle";
+@import "./mixins/clearfix";
+@import "./mixins/ellipsis";
+@import "./mixins/hide-text";
+@import "./mixins/line-height-top";
+@import "./mixins/vertical-centering";
