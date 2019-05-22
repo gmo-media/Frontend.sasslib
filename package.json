@@ -1,7 +1,7 @@
 {
   "name": "@gmo-media/sasslib",
   "description": "Sass libraries for gmo-media",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "GMO Media,Inc.",
   "bugs": {
     "url": "https://github.com/gmo-media/Frontend.sasslib/issues"
