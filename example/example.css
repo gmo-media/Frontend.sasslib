@@ -1,0 +1,30 @@
+.u-expand-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  content: "";
+  pointer-events: auto;
+}
+
+.u-over-expand-link {
+  position: relative;
+  z-index: 2;
+}
+
+.c-af-media {
+  position: relative;
+  display: flex;
+}
+
+.c-af-media__thumb {
+  width: 120px;
+}
+
+.c-af-media__detail {
+  width: calc(100% - 120px);
+  padding-left: 10px;
+}
