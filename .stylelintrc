@@ -2,5 +2,8 @@
   "extends": [
     "stylelint-prettier/recommended",
     "stylelint-config-rational-order"
-  ]
+  ],
+  "rules": {
+    "number-leading-zero": "never"
+  }
 }
