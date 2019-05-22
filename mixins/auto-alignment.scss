@@ -15,7 +15,13 @@
 // - 子要素の font-size を指定しなかった場合 1rem になります。
 // - 子要素の高さが異なる場合は頭ぞろえになります。
 //
-@mixin auto-alignment($column, $child, $spacing-x: 0, $spacing-y: 0, $font-size: 1rem) {
+@mixin auto-alignment(
+  $column,
+  $child,
+  $spacing-x: 0,
+  $spacing-y: 0,
+  $font-size: 1rem
+) {
   // IEの calc() は小数第３位を四捨五入するため、分母を 100% にすると
   // $column によってはカラム落ちしてしまうので、99.9999% にする
   $full-width: 99.9999%;
@@ -29,9 +35,10 @@
   & > #{$child} {
     @if $spacing-x == 0 {
       width: calc(#{$full-width} / #{$column});
-    }
-    @else {
-      width: calc((#{$full-width} - #{$spacing-x * ($column - 1)}) / #{$column});
+    } @else {
+      width: calc(
+        (#{$full-width} - #{$spacing-x * ($column - 1)}) / #{$column}
+      );
 
       &:not(:nth-of-type(#{$column}n)) {
         margin-right: $spacing-x;

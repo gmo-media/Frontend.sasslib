@@ -17,15 +17,15 @@ $z-over-expand-link: $z-expand-link + 1 !default;
 //
 .u-expand-link {
   &::after {
-    z-index: $z-expand-link;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    pointer-events: auto;
-    content: "";
+    z-index: $z-expand-link;
     background-color: rgba(0, 0, 0, 0);
+    content: "";
+    pointer-events: auto;
   }
 }
 

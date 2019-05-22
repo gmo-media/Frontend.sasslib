@@ -7,10 +7,22 @@
     "url": "https://github.com/gmo-media/Frontend.sasslib/issues"
   },
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "prettier": "^1.17.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-prettier": "^1.1.0"
   },
   "homepage": "https://github.com/gmo-media/Frontend.sasslib#readme",
   "license": "MIT",
   "main": "index.js",
-  "repository": "https://github.com/gmo-media/Frontend.sasslib"
+  "repository": "https://github.com/gmo-media/Frontend.sasslib",
+  "scripts": {
+    "build:example": "node-sass --output-style expanded -o example example/example.scss",
+    "format": "run-s format:prettier format:stylelint",
+    "format:prettier": "prettier --parser scss --write **/*.scss",
+    "format:stylelint": "stylelint --fix **/*.scss || exit 0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
