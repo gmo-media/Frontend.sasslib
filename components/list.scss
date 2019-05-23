@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import "./root";
+
+// ------------------------------------------------------------------
+// リスト
+//
+// @param {list} $border - ボーダーのスタイル
+// @param {list} $padding - 各アイテムのパディング
+//
+// ボーダーはアイテムとアイテムの間にだけ入ります。一番上と一番下には
+// 入らないので、必要なら利用する側で用意してください。
+//
+// Hint:
+// 引数に null を渡すと、そのプロパティは設定されなくなります。
+//
+@mixin c-list($border, $padding) {
+  @include c-root;
+
+  > li,
+  &__item {
+    padding: $padding;
+
+    // 先頭と末尾にはボーダーをつけない
+    &:not(:last-child) {
+      border-bottom: $border;
+    }
+
+    @content;
+  }
+}
