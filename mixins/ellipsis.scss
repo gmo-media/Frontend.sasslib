@@ -10,8 +10,8 @@
 //
 @mixin ellipsis($lines: 1) {
   @if $lines == 1 {
-    text-overflow: ellipsis;
     white-space: nowrap;
+    text-overflow: ellipsis;
   } @else {
     // ３つとも非標準プロパティのためベンダープレフィクスをつける。
     // autoprefixerのremoveモードで消されないよう、インターポレーション形式で書く。

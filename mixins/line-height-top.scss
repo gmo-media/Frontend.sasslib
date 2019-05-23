@@ -29,11 +29,11 @@
   // 上の余白をネガティブマージンで消す（インラインボックス全体が上にずれる）
   // ※上下の余白は ($line-height * 1em - 1em) / 2
   &::before {
-    margin-top: calc((1 - #{$line-height}) * .5em);
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
   }
 
   // 消した分の余白を下に補う（マージンの相殺を避けるためパディングを使う）
   &::after {
-    padding-bottom: calc((#{$line-height} - 1) * .5em);
+    padding-bottom: calc((#{$line-height} - 1) * 0.5em);
   }
 }

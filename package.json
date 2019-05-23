@@ -24,12 +24,13 @@
     "build:example": "node-sass --output-style expanded -o example example/example.scss",
     "build:generate": "node scripts/generate.js",
     "format": "run-s format:prettier format:stylelint",
-    "format:prettier": "prettier --parser scss --write **/*.scss",
+    "format:prettier": "prettier --parser scss --loglevel warn --write **/*.scss",
     "format:stylelint": "stylelint --fix **/*.scss",
+    "lint": "stylelint **/*.scss",
     "postpublish": "git push origin --all; git push origin --tags",
     "postversion": "npm publish --access=public",
-    "preversion": "npm test",
-    "test": "run-s format build",
+    "preversion": "run-s test build",
+    "test": "run-s format lint",
     "update:minor": "npm version minor",
     "update:patch": "npm version patch"
   }
