@@ -27,7 +27,7 @@
     "format:prettier": "prettier --parser scss --loglevel warn --write **/*.scss",
     "format:stylelint": "stylelint --fix **/*.scss",
     "lint": "stylelint **/*.scss",
-    "postpublish": "git push origin --all; git push origin --tags",
+    "postpublish": "git push origin --all & git push origin --tags",
     "postversion": "npm publish --access=public",
     "preversion": "run-s test build",
     "test": "run-s format lint",
