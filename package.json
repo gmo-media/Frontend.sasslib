@@ -29,7 +29,7 @@
     "postpublish": "git push origin --all",
     "postversion": "npm publish --access=public",
     "preversion": "npm test",
-    "test": "run-p format build:example",
+    "test": "run-s format build",
     "update:minor": "npm version minor",
     "update:patch": "npm version patch"
   }
