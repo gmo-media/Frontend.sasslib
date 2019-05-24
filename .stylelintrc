@@ -12,7 +12,7 @@
     "order/properties-order": [],
     "plugin/rational-order": [true, {
       "border-in-box-model": true,
-      "empty-line-between-groups": false,
+      "empty-line-between-groups": false
     }],
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
