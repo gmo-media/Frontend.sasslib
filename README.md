@@ -8,7 +8,20 @@ $ npm install --save-dev @gmo-media/sasslib
 
 ## How to use
 必要なファイルを import します。
-[node-sass-package-importer](https://www.npmjs.com/package/node-sass-package-importer) を使うのが便利です。
+
+[node-sass-package-importer](https://www.npmjs.com/package/node-sass-package-importer) を使い、
+
+```scss
+@import "~@gmo-media/sasslib";
+```
+
+とすると `src/` 以下の `utility/` 以外のファイルが全て読み込まれます。
+
+`utility/` 以下のファイルは必要に応じて１つ１つ読み込んでください。
+
+```scss
+@import "~@gmo-media/sasslib/src/utility/fix-ios";
+```
 
 ## Development
 ```bash

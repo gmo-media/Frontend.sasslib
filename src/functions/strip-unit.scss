@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// ------------------------------------------------------------------
+// 数値から単位を取り除く
+// https://css-tricks.com/snippets/sass/strip-unit-function/
+//
+// @param {number} $number - 単位を外したい数値
+// @return {number} - 単位のない数値
+//
+@function strip-unit($number) {
+  @if type-of($number) == number and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

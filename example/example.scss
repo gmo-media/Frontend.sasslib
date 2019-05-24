@@ -1,12 +1,13 @@
-@import "components";
-@import "functions";
-@import "mixins";
-@import "utilities/fix-ios";
-@import "utilities/expand-link";
-@import "utilities/margin";
+@import "../src/index";
+@import "../src/utility/expand-link";
+@import "../src/utility/fix-ios";
 
 .c-af-media {
   $--thumb-width: 120px;
 
   @include c-media($--thumb-width, 10px);
+
+  &__button {
+    @extend %fix-ios-event-delegation;
+  }
 }

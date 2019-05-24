@@ -15,6 +15,10 @@
   z-index: 2;
 }
 
+.c-af-media__button {
+  cursor: pointer;
+}
+
 .c-af-media {
   position: relative;
   display: flex;
