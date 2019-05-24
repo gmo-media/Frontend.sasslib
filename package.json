@@ -23,7 +23,7 @@
   "repository": "https://github.com/gmo-media/Frontend.sasslib",
   "scripts": {
     "build": "run-s build:generate build:example",
-    "build:example": "node-sass --output-style expanded -o example example/example.scss",
+    "build:example": "node-sass --include-path src --output-style expanded -o example example/example.scss",
     "build:generate": "node scripts/generate.js",
     "format": "run-s format:prettier format:stylelint",
     "format:prettier": "prettier --parser scss --loglevel warn --write src/**",
