@@ -1,3 +1,7 @@
+.c-af-media__button {
+  cursor: pointer;
+}
+
 .u-expand-link::after {
   position: absolute;
   top: 0;
@@ -13,10 +17,6 @@
 .u-over-expand-link {
   position: relative;
   z-index: 2;
-}
-
-.c-af-media__button {
-  cursor: pointer;
 }
 
 .c-af-media {
