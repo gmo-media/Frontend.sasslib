@@ -17,6 +17,7 @@
 //
 @mixin c-media($thumb-width, $spacing) {
   @include c-root;
+
   display: flex;
 
   &__thumb {

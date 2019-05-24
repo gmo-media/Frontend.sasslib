@@ -14,7 +14,9 @@
     "stylelint": "^10.0.1",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-prettier": "^1.1.0"
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-prettier": "^1.1.0",
+    "stylelint-scss": "^3.6.1"
   },
   "homepage": "https://github.com/gmo-media/Frontend.sasslib#readme",
   "license": "MIT",
@@ -24,9 +26,9 @@
     "build:example": "node-sass --output-style expanded -o example example/example.scss",
     "build:generate": "node scripts/generate.js",
     "format": "run-s format:prettier format:stylelint",
-    "format:prettier": "prettier --parser scss --loglevel warn --write **/*.scss",
-    "format:stylelint": "stylelint --fix **/*.scss",
-    "lint": "stylelint **/*.scss",
+    "format:prettier": "prettier --parser scss --loglevel warn --write src/**",
+    "format:stylelint": "stylelint --fix src/**",
+    "lint": "stylelint src/**",
     "postpublish": "git push origin --all & git push origin --tags",
     "postversion": "npm publish --access=public",
     "preversion": "run-s test build",
