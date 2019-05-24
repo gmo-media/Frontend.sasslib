@@ -1,6 +1,7 @@
 const fs = require('fs');
 const glob = require('glob');
 
+const srcDir = './src';
 const targets = [
   'components',
   'mixins'
@@ -13,7 +14,7 @@ function createScss(matches) {
 //
 ${
   matches.map(file => file.replace(/\.scss$/, ''))
-    .map(file => `@import "${file}";`)
+    .map(file => `@import "./${file}";`)
     .join('\n')
 }
 `;
@@ -21,14 +22,14 @@ ${
 
 function generate(dir) {
   return new Promise((resolve, reject) => {
-    glob(`./${dir}/*.scss`, (err, matches) => {
+    glob(`${dir}/*.scss`, {cwd: srcDir}, (err, matches) => {
       if (err) {
         reject(err);
         return;
       }
 
       const data = createScss(matches);
-      fs.writeFile(`./${dir}.scss`, data, 'utf-8', (err) => {
+      fs.writeFile(`${srcDir}/${dir}.scss`, data, 'utf-8', (err) => {
         err ? reject(err) : resolve();
       });
     });
