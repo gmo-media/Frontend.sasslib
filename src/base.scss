@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+// ------------------------------------------------------------------
+// box-sizingのリセット
+// https://css-tricks.com/box-sizing/
+//
+// ユニバーサルセレクタで継承（inherit）するようにしておくことで、
+// 部分的に`content-box`を使うのが簡単になります。
+// 例えば、`content-box`前提で作られた他社ウィジェットを利用したい場合などです。
+// そのウィジェットの一番外のボックスに`box-sizing: content-box;`を当てるだけで
+// そのまま使えるようになります。
+//
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
