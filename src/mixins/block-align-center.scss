@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+// ------------------------------------------------------------------
+// ブロック要素を左右中央に配置する
+//
+@mixin block-align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
