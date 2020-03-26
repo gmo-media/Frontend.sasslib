@@ -3,7 +3,7 @@
 
 ## Install
 ```bash
-$ npm install --save-dev @gmo-media/sasslib
+$ npm install --save @gmo-media/sasslib
 ```
 
 ## How to use
